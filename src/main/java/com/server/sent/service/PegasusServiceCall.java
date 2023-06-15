@@ -18,7 +18,7 @@ public class PegasusServiceCall {
         try {
 
             Thread.sleep(2000);
-            emitter.send("");
+
             emitter.send(FlightInfo.builder().id(1l).to("istanbul").from("izmir").price(new BigDecimal(1000.20).setScale(2, RoundingMode.HALF_EVEN)).build());
 
             return CompletableFuture.completedFuture(null);
